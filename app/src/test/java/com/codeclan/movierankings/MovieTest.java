@@ -19,5 +19,10 @@ public class MovieTest {
         assertEquals("A New Hope", movie1.getTitle());
     }
 
+    @Test
+    public void testMovieHasGenre(){
+        assertEquals("Sci Fi", movie1.getGenre());
+    }
+
 
 }
