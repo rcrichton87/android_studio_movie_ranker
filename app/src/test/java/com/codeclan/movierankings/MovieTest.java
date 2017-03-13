@@ -24,5 +24,15 @@ public class MovieTest {
         assertEquals("Sci Fi", movie1.getGenre());
     }
 
+    @Test
+    public void testMovieHasRank(){
+        assertEquals(1, movie1.getRanking());
+    }
+
+    @Test
+    public void testSetTitle(){
+        movie1.setTitle("The Empire Strikes Back");
+        assertEquals("The Empire Strikes Back", movie1.getTitle());
+    }
 
 }
