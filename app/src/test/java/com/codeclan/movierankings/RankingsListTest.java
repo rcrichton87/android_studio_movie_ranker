@@ -29,12 +29,17 @@ public class RankingsListTest {
         sortedMovies.add(movie2);
         sortedMovies.add(movie1);
         sortedMovies.add(movie3);
+        rankingsList = new RankingsList(unsortedMovies);
     }
 
     @Test
     public void testNewRankedListIsSorted(){
-        rankingsList = new RankingsList(unsortedMovies);
         assertEquals(sortedMovies, rankingsList.getAllMovies());
+    }
+
+    @Test
+    public void testGetMovieByRanking(){
+        assertEquals(movie2, rankingsList.getMovieByRanking(1));
     }
 
 }

@@ -28,4 +28,9 @@ public class RankingsList {
         return rankedMovies;
     }
 
+    public Movie getMovieByRanking(int rank){
+        int index = rank - 1;
+        return rankedMovies.get(index);
+    }
+
 }
