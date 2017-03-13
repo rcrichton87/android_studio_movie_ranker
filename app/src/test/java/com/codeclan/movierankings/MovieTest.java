@@ -40,4 +40,10 @@ public class MovieTest {
         movie1.setGenre("Action");
         assertEquals("Action", movie1.getGenre());
     }
+
+    @Test
+    public void testSetRank(){
+        movie1.setRanking(2);
+        assertEquals(2, movie1.getRanking());
+    }
 }
