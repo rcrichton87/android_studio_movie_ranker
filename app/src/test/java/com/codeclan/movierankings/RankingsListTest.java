@@ -81,4 +81,16 @@ public class RankingsListTest {
         assertEquals(10, rankingsList.getSize());
     }
 
+    @Test
+    public void testFindMovieByTitle(){
+        assertEquals(movie6, rankingsList.findMovieByTitle("Alien"));
+    }
+
+    @Test
+    public void testMoveUpList(){
+        rankingsList.moveUpList(movie1);
+        assertEquals(movie1, rankingsList.getMovieByRanking(1));
+        assertEquals(movie2, rankingsList.getMovieByRanking(2));
+    }
+
 }

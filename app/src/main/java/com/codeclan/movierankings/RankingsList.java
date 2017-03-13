@@ -42,4 +42,21 @@ public class RankingsList {
         return rankedMovies.size();
     }
 
+    public Movie findMovieByTitle(String title){
+        for (Movie movie : rankedMovies){
+            if (movie.getTitle() == title){
+                return movie;
+            }
+        }
+        return null;
+    }
+
+    public void moveUpList(Movie movie){
+        int movieRanking = movie.getRanking();
+        int oldIndex = movieRanking - 1;
+        int newIndex = movieRanking - 2;
+        Movie replacedMovie = getMovieByRanking(movieRanking - 1);
+        rankedMovies.set(newIndex, movie);
+        rankedMovies.set(oldIndex, replacedMovie);
+    }
 }
