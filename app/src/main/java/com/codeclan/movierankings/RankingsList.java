@@ -33,4 +33,13 @@ public class RankingsList {
         return rankedMovies.get(index);
     }
 
+    public void replaceLastMovie(Movie movie){
+        movie.setRanking(10);
+        rankedMovies.set(9, movie);
+    }
+
+    public int getSize(){
+        return rankedMovies.size();
+    }
+
 }
