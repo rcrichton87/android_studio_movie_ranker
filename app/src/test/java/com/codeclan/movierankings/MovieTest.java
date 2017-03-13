@@ -35,4 +35,9 @@ public class MovieTest {
         assertEquals("The Empire Strikes Back", movie1.getTitle());
     }
 
+    @Test
+    public void testSetGenre(){
+        movie1.setGenre("Action");
+        assertEquals("Action", movie1.getGenre());
+    }
 }
