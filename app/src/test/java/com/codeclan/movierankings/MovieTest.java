@@ -46,4 +46,11 @@ public class MovieTest {
         movie1.setRanking(2);
         assertEquals(2, movie1.getRanking());
     }
+
+    @Test
+    public void overrideToString(){
+        String expected = "Title: A New Hope, Genre: Sci Fi, Ranking: 1";
+        assertEquals(expected, movie1.toString());
+
+    }
 }

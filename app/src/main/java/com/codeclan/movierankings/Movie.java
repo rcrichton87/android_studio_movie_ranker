@@ -40,4 +40,10 @@ public class Movie {
         this.ranking = ranking;
     }
 
+    @Override
+    public String toString(){
+        String output = "Title: " + getTitle() + ", Genre: " + getGenre() + ", Ranking: " + getRanking();
+        return output;
+    }
+
 }
