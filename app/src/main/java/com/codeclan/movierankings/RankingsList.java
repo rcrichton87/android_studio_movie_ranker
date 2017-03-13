@@ -59,4 +59,13 @@ public class RankingsList {
         rankedMovies.set(newIndex, movie);
         rankedMovies.set(oldIndex, replacedMovie);
     }
+
+    public void moveDownList(Movie movie){
+        int movieRanking = movie.getRanking();
+        int oldIndex = movieRanking - 1;
+        int newIndex = movieRanking;
+        Movie replacedMovie = getMovieByRanking(movieRanking + 1);
+        rankedMovies.set(newIndex, movie);
+        rankedMovies.set(oldIndex, replacedMovie);
+    }
 }

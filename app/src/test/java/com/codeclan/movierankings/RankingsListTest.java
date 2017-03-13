@@ -93,4 +93,12 @@ public class RankingsListTest {
         assertEquals(movie2, rankingsList.getMovieByRanking(2));
     }
 
+    @Test
+    public void testMoveDownList(){
+        rankingsList.moveDownList(movie2);
+        assertEquals(movie1, rankingsList.getMovieByRanking(1));
+        assertEquals(movie2, rankingsList.getMovieByRanking(2));
+    }
+
+
 }
